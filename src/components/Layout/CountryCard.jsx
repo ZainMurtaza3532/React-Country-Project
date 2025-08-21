@@ -3,7 +3,6 @@ import { MdPeople, MdPublic, MdLocationOn } from "react-icons/md";
 
 export const CountryCard = ({ country }) => {
   const { flags, name, population, region, capital } = country;
-
   return (
     <li className="group">
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 transform hover:-translate-y-3 hover:shadow-2xl border border-gray-100">
@@ -25,10 +24,8 @@ export const CountryCard = ({ country }) => {
         {/* Country Information */}
         <div className="p-6">
           <div className="flex items-start justify-between mb-4">
-            <h3 className="text-2xl font-bold text-gray-900 truncate">
-              {name.common.length > 20
-                ? name.common.slice(0, 20) + "..."
-                : name.common}
+            <h3 className="text-2xl font-bold text-gray-900 break-words">
+              {name.common}
             </h3>
             <div className="flex-shrink-0 ml-2">
               <div className="w-3 h-3 rounded-full bg-green-500 shadow-[0_0_8px_rgba(72,187,120,0.5)]"></div>
